@@ -2,3 +2,8 @@ openimaj_classifier/target
 openimaj_classifier/results
 raw_data
 theano_conv_net/IPython
+scraping/tutorial
+scraping/data
+scraping/images
+*.pyc
+*.pyo
