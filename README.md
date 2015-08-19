@@ -44,6 +44,21 @@ Install theano:
 
 To train the CNN on you GPU (much more efficient), you also need to have a good NVidia graphic card, and install [Cuda](https://developer.nvidia.com/cuda-downloads) and g++. On Windows you will probably need to install Visual Studio (See [this post](http://stackoverflow.com/questions/31892519/link-error-with-cuda-7-5-in-windows-10-from-theano-project-msvcrt-lib-error-l) for an example of setup).
 
+Depending on your settings, you will need to customize the `.theanorc` file (in your home folder). An example is provided below (for Windows):
+
+    [global]
+    device = gpu
+    floatX = float32
+    exception_verbosity = high
+    compute_test_value = raise
+
+    [cuda]
+    root = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5
+
+    [nvcc]
+    flags = --use-local-env  --cl-version=2013 -LC:\Users\niluje\Anaconda\Lib;
+    compiler_bindir=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64
+
 Run the script (cd into `theano_conv_net`):
 
     python Theano_aircraft.py
