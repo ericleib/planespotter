@@ -1,0 +1,2 @@
+# planespotter
+This repository contains: 
